@@ -4,9 +4,9 @@
 This repository includes files from a previous development to showcase my skills and thought process when using Advanced Custom Fields and its block feature within WordPress.
 
 ## Branches
-There are two branches, master and trimmed.
+There are two branches, main and trimmed.
 
-* The master branch has the full child theme files.
+* The main branch has the full child theme files.
 * The trimmed branch has only those files which are seen as necessary for review.
 
 ## Parent Theme
