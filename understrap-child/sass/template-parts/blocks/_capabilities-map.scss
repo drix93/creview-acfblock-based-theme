@@ -1,0 +1,180 @@
+.capabilities-map-block {
+    .list-container {
+        @extend .container;
+        @extend .px-0;
+    }
+
+    &.one {
+        .cap-item {
+            @include media-breakpoint-only(md) {
+                &:nth-child(2n) {
+                    border-right: 0;
+                }
+
+                &:last-child,
+                &:nth-last-child(2) {
+                    border-bottom: 0;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+
+                &:nth-child(3n),
+                &:last-child {
+                    border-right: 0;
+                }
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &.two {
+        .cap-item {
+            @include media-breakpoint-only(md) {
+
+                &:nth-child(2n),
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+
+                &:nth-child(3n),
+                &:last-child {
+                    border-right: 0;
+                }
+
+                &.last {
+
+                    &-1,
+                    &-2 {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &.three {
+        .cap-item {
+            @include media-breakpoint-only(md) {
+
+                &:nth-child(2n),
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                &:nth-child(3n) {
+                    border-right: 0;
+                }
+
+                &.last {
+
+                    &-2,
+                    &-3 {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .cap-item {
+        padding: 40px 60px;
+        border-color: rgba(#434244, .3);
+
+        ul,
+        ol,
+        dl {
+            list-style: inherit;
+        }
+
+        .lead-content {
+            position: relative;
+            height: 140px;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #FFF 100%);
+                height: 50px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        .container:not(.list-container) {
+            @extend .d-none;
+            background-image: url(/wp-content/uploads/cap-hover-bg@2x.jpg);
+            background-repeat: repeat;
+            background-position: center;
+            padding: 56px 43px 20px;
+            z-index: 1;
+
+            .title span {
+                border-bottom: 3px solid #fac226;
+                padding-bottom: 1px;
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(#434244, .3);
+        }
+
+        &:hover {
+            .container:not(.list-container) {
+                @extend .d-block;
+                display: block !important;
+
+                @include media-breakpoint-up(md) {
+                    --offsetBox: 3px;
+                    width: calc(300% + var(--offsetBox));
+                    position: absolute;
+                    left: 0;
+                    top: -25px;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 0 15px;
+
+                .lead-content {
+                    display: none;
+                }
+            }
+        }
+
+        @include media-breakpoint-only(md) {
+
+            &:nth-child(2n):hover .container:not(.list-container) {
+                --offsetBox: 0px;
+                margin-left: -100%;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            border-right: 1px solid rgba(#434244, .3);
+        }
+
+        @include media-breakpoint-up(lg) {
+
+            &.middle:hover .container:not(.list-container) {
+                --offsetBox: 0px;
+                margin-left: -100%;
+            }
+
+            &:nth-child(3n):hover .container:not(.list-container) {
+                --offsetBox: 0px;
+                margin-left: -200%;
+            }
+        }
+    }
+}

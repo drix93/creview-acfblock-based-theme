@@ -1,0 +1,178 @@
+.home-header {
+    $boxesHalfHeight-XS: 49vw;
+    $boxesHalfHeight-SM: 155px;
+    $boxesHalfHeight-MD: 220px;
+    $boxesHalfHeight-LG: 125px;
+    $boxesHalfHeight-XL: 170px;
+
+    &-block {
+        @include boxShadow(bottom, .7);
+        max-height: 550px;
+        min-height: 400px;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: right;
+        position: relative;
+
+        @include media-breakpoint-up(sm) {
+            min-height: 300px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            min-height: 620px;
+            max-height: 620px;
+        }
+
+        @media screen and (min-width: 1903px) {
+            min-height: 550px;
+            max-height: 550px;
+        }
+
+        @media screen and (min-width: 1560px) {
+            background-size: 75% auto;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            // Gradient link - https://colorzilla.com/gradient-editor/#f0f0f0+0,ef0000+35,f0f0f0+35,000000+100&1+0,1+33,0+60,0+90,0.4+100
+            background: -moz-linear-gradient(left, #f0f0f0 0, #f0f0f0 20%, rgba(240, 240, 240, .93) 24%, rgba(148, 148, 148, 0) 60%, rgba(37, 37, 37, 0) 90%, rgba(0, 0, 0, .4) 100%);
+            background: -webkit-linear-gradient(left, #f0f0f0 0, #f0f0f0 20%, rgba(240, 240, 240, .93) 24%, rgba(148, 148, 148, 0) 60%, rgba(37, 37, 37, 0) 90%, rgba(0, 0, 0, .4) 100%);
+            background: linear-gradient(to right, #f0f0f0 0, #f0f0f0 20%, rgba(240, 240, 240, .93) 24%, rgba(148, 148, 148, 0) 60%, rgba(37, 37, 37, 0) 90%, rgba(0, 0, 0, .4) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#66000000', GradientType=1);
+            height: 100%;
+            width: 100%;
+            
+            @include media-breakpoint-between(sm, md) {
+                background: -moz-linear-gradient(left, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 33%, rgba(240, 240, 240, 0.93) 35%, rgba(148, 148, 148, 0) 60%, rgba(37, 37, 37, 0) 90%, rgba(0, 0, 0, 0.4) 100%);
+                background: -webkit-linear-gradient(left, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 33%, rgba(240, 240, 240, 0.93) 35%, rgba(148, 148, 148, 0) 60%, rgba(37, 37, 37, 0) 90%, rgba(0, 0, 0, 0.4) 100%);
+                background: linear-gradient(to right, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 33%, rgba(240, 240, 240, 0.93) 35%, rgba(148, 148, 148, 0) 60%, rgba(37, 37, 37, 0) 90%, rgba(0, 0, 0, 0.4) 100%);
+            }
+
+            @media screen and (min-width: 1400px) {
+                background: -moz-linear-gradient(left, #f0f0f0 0, #f0f0f0 30%, rgba(240, 240, 240, .93) 34%, rgba(148, 148, 148, 0) 60%, rgba(37, 37, 37, 0) 90%, rgba(0, 0, 0, .4) 100%);
+                background: -webkit-linear-gradient(left, #f0f0f0 0, #f0f0f0 30%, rgba(240, 240, 240, .93) 34%, rgba(148, 148, 148, 0) 60%, rgba(37, 37, 37, 0) 90%, rgba(0, 0, 0, .4) 100%);
+                background: linear-gradient(to right, #f0f0f0 0, #f0f0f0 30%, rgba(240, 240, 240, .93) 34%, rgba(148, 148, 148, 0) 60%, rgba(37, 37, 37, 0) 90%, rgba(0, 0, 0, .4) 100%);
+            }
+
+            @media (max-width: 575px) {
+                background: -moz-linear-gradient(left, rgba(237, 237, 237, 0.95) 0%, rgba(237, 237, 237, 0.95) 100%);
+                background: -webkit-linear-gradient(left, rgba(237, 237, 237, 0.95) 0%, rgba(237, 237, 237, 0.95) 100%);
+                background: linear-gradient(to right, rgba(237, 237, 237, 0.95) 0%, rgba(237, 237, 237, 0.95) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ededed', endColorstr='#f2ededed', GradientType=1);
+            }
+        }
+
+        .container {
+            padding-bottom: calc(#{$boxesHalfHeight-XS} / 2);
+
+            @include media-breakpoint-up(sm) {
+                padding-bottom: calc(#{$boxesHalfHeight-SM} / 2);
+            }
+
+            @include media-breakpoint-up(md) {
+                padding-bottom: calc(#{$boxesHalfHeight-MD} / 2);
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-bottom: calc(#{$boxesHalfHeight-LG} / 2);
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding-bottom: calc(#{$boxesHalfHeight-XL} / 2);
+            }
+        }
+    }
+
+    .ctas {
+        margin-top: calc(#{$boxesHalfHeight-XS} / -2);
+
+        @include media-breakpoint-up(sm) {
+            margin-top: calc(#{$boxesHalfHeight-SM} / -2);
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-top: calc(#{$boxesHalfHeight-MD} / -2);
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-top: calc(#{$boxesHalfHeight-LG} / -2);
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-top: calc(#{$boxesHalfHeight-XL} / -2);
+        }
+
+        .cta-block {
+            font-family: $font-2;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            @include media-breakpoint-down(xs) {
+                max-width: 81%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .col {
+                min-height: $boxesHalfHeight-XS;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+
+                @include media-breakpoint-up(sm) {
+                    min-height: $boxesHalfHeight-SM;
+                    max-width: 100%;
+                }
+
+                @include media-breakpoint-up(md) {
+                    min-height: $boxesHalfHeight-MD;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    min-height: $boxesHalfHeight-LG;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    min-height: $boxesHalfHeight-XL;
+                }
+            }
+
+            hr {
+                @extend .my-0;
+                border-top: 3px solid $yellow;
+                position: absolute;
+                width: calc(100% - 30px);
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 2.5rem;
+            }
+
+            a {
+                z-index: 1;
+                font-size: 16px;
+
+                @include media-breakpoint-up(sm) {
+                    font-size: 17px;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 15px;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    font-size: 17px;
+                }
+
+                color: $white;
+
+                &:hover {
+                    text-decoration: none;
+                    padding-bottom: 2em;
+                }
+            }
+
+        }
+    }
+}
+

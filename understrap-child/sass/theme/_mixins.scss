@@ -1,0 +1,31 @@
+// Used to set transition effect for buttons, links and other elements where needed
+@mixin transition($duration: .3) {
+    -webkit-transition: all #{$duration}s ease;
+    -moz-transition: all #{$duration}s ease;
+    -ms-transition: all #{$duration}s ease;
+    -o-transition: all #{$duration}s ease;
+    transition: all #{$duration}s ease;
+}
+
+// Input placeholder styles
+@mixin placeholder() {
+
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
+    &:-moz-placeholder,
+    &::placeholder {
+        @content;
+    }
+}
+
+// Used to set the box shadow on the various headers and footer CTAs
+@mixin boxShadow($position: bottom, $opacity: 1) {
+    @if $position == top {
+        box-shadow: 0 5px 5px 0 rgba($primary, $opacity), 0 0 0 0 transparent, 0 0 0 0 transparent, 0 0 0 0 transparent;
+    } @else if $position == bottom {
+        box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent, 0 0 0 0 transparent, 0 5px 5px 0 rgba($primary, $opacity);
+    } @else {
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,33 @@
+.rev-image-content-block {
+
+    .row:not(:last-child) {
+        margin-bottom: 45px;
+    }
+
+    ul,
+    ol,
+    dl {
+        padding-left: 16px;
+    }
+
+    h2 {
+        margin-bottom: 15px;
+    }
+
+    h5 {
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    @include media-breakpoint-up(xl) {
+        .basis {
+            &-1 {
+                flex-basis: 27.9%
+            }
+
+            &-2 {
+                flex-basis: 55.3%
+            }
+        }
+    }
+}

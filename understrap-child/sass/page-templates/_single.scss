@@ -1,0 +1,26 @@
+.single {
+    &-post {
+        .entry {
+            &-title {
+                border: none;
+                padding-bottom: 0;
+                text-transform: uppercase;
+
+            }
+
+            .back-link a {
+                color: $primary;
+                font-size: 18px;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+.entry-meta {
+    font-size: 18px;
+}

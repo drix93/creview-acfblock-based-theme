@@ -1,0 +1,52 @@
+.page-id-6787 {
+    .sitemap {
+        padding-top: 66px;
+        padding-bottom: 66px;
+
+        .pages.card-columns {
+            list-style: none;
+            padding-left: 15px;
+
+            >li {
+                @extend .card;
+                border: 0;
+
+                >a {
+                    @extend h2;
+                    @extend .mb-3;
+                    color: $black;
+
+                    &:hover {
+                        color: #747679;
+                        text-decoration: none;
+                    }
+                }
+
+                .children a {
+                    color: $black;
+                }
+
+                @include media-breakpoint-down(xs) {
+                    display: block;
+                }
+            }
+
+            @include media-breakpoint-up(sm) {
+                column-count: 1;
+            }
+
+            @include media-breakpoint-up(md) {
+                column-count: 2;
+            }
+
+            @include media-breakpoint-up(lg) {
+                column-count: 3;
+            }
+        }
+
+        @include media-breakpoint-between(sm, md) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+}

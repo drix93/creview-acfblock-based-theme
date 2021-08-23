@@ -1,0 +1,108 @@
+.intro-header-block {
+    .header {
+        @include boxShadow(bottom, .7);
+        @extend .d-flex;
+        @extend .align-items-center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 264px;
+        position: relative;
+        background-color: #ededed;
+
+        &.no-bg-text {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-weight: normal;
+            text-transform: unset;
+        }
+
+        &::before {
+            --gradientMove: 33%;
+            content: '';
+            background: rgb(237, 237, 237);
+            background: -moz-linear-gradient(90deg, rgba(237, 237, 237, 1) 0%, rgba(237, 237, 237, 1) var(--gradientMove), rgba(237, 237, 237, 0) 60%);
+            background: -webkit-linear-gradient(90deg, rgba(237, 237, 237, 1) 0%, rgba(237, 237, 237, 1) var(--gradientMove), rgba(237, 237, 237, 0) 60%);
+            background: linear-gradient(90deg, rgba(237, 237, 237, 1) 0%, rgba(237, 237, 237, 1) var(--gradientMove), rgba(237, 237, 237, 0) 60%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ededed", endColorstr="#ededed", GradientType=1);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+
+            @include media-breakpoint-up(lg) {
+                --gradientMove: 2%;
+                width: 850px;
+                right: 0;
+            }
+
+            @media (max-width: 575px) {
+                background: linear-gradient(rgba(237, 237, 237, .95), rgba(237, 237, 237, .95));
+            }
+        }
+    }
+
+    .bg-heading {
+        height: 34px;
+        margin-top: 20px;
+
+        .bg-text {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            font-size: 40px;
+            margin-top: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        @include media-breakpoint-up(sm) {
+            height: 39px;
+
+            .bg-text {
+                font-size: 50px;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            height: 61px;
+
+            .bg-text {
+                font-size: 75px;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: 66px;
+
+            .bg-text {
+                font-size: 80px;
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: 73px;
+
+            .bg-text {
+                font-size: 90px;
+            }
+        }
+    }
+}
+
+.old-intro-header-block {
+    @include transition;
+    @include boxShadow(bottom, .7);
+    background-size: auto 100% !important;
+    background-repeat: no-repeat !important;
+    background-position: right !important;
+
+    h1 {
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 22px;
+    }
+}

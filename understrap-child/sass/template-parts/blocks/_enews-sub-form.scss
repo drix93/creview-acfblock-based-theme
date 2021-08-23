@@ -1,0 +1,82 @@
+.enews-sub-form-block {
+    #subForm {
+        @extend .row;
+
+        >p,
+        >div {
+            @extend .col-12;
+        }
+
+        >p {
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                @extend .col-sm-6;
+            }
+
+            &:nth-child(2) {
+                @extend .pl-sm-0;
+                @extend .pr-sm-4;
+            }
+
+            &:nth-child(4) {
+                @extend .mb-0;
+            }
+        }
+
+        >div {
+            &:not(:last-of-type) {
+                @extend .col-sm-6;
+            }
+
+            &:last-of-type {
+                @extend .my-3;
+                @extend .pb-3;
+            }
+        }
+
+        .js-cm-submit-button {
+            @extend .btn;
+            @extend .btn-primary;
+        }
+    }
+
+    #enews {
+        .container .container {
+            ul {
+                @extend .row;
+                @extend .px-0;
+                list-style: none;
+
+                li {
+                    padding-left: 30px !important;
+                    font-weight: bold;
+
+                    a {
+                        font-weight: normal;
+                    }
+
+                    &:nth-of-type(even) {
+                        @extend .col-lg-5;
+                    }
+
+                    &:nth-of-type(odd) {
+                        @extend .offset-lg-1;
+                        @extend .col-lg-5;
+                    }
+
+                    &:not(:last-child) {
+                        @extend .mb-4;
+                    }
+
+                    &::before {
+                        content: "•";
+                        position: absolute;
+                        left: 15px;
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

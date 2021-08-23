@@ -1,0 +1,67 @@
+.logo-columns-block {
+
+    &.align-vertical {
+        .row>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .stretched-link {
+        display: block;
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+
+    &.logo {
+
+        &-sm,
+        &-md,
+        &-lg,
+        &-xl,
+        &-cheight {
+            .logo-img {
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+
+        &-sm {
+            .logo-img {
+                width: 110px;
+                height: 110px;
+            }
+        }
+
+        &-md {
+            .logo-img {
+                width: 136px;
+                height: 136px;
+            }
+        }
+
+        &-lg {
+            .logo-img {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        &-xl {
+            .logo-img {
+                width: 350px;
+                height: 180px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        img {
+            max-width: 250px;
+        }
+    }
+}

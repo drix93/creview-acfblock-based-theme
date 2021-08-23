@@ -1,0 +1,52 @@
+.special-heading-block {
+    h2 {
+        border-bottom: none;
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        .bg-text {
+            font-size: 40px;
+            margin-top: 0;
+            width: 100%;
+            top: -6px;
+            text-align: unset;
+
+            @include media-breakpoint-up(md) {
+                font-size: 70px;
+            }
+        }
+    }
+
+    &.aligncenter {
+        text-align: center;
+
+        .bg-text {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &.alignleft {
+        float: unset;
+        display: block;
+        margin-right: 0;
+
+        .bg-text {
+            left: 0;
+            transform: unset;
+        }
+    }
+
+    &.alignright {
+        text-align: right;
+        float: unset;
+        display: block;
+        margin-left: 0;
+
+        .bg-text {
+            right: 0;
+            transform: unset;
+        }
+    }
+}

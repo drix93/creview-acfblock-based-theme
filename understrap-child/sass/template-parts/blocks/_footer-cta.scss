@@ -1,0 +1,123 @@
+.footer-cta-block {
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #ededed;
+    position: relative;
+
+    &.has-shadow {
+        @include boxShadow(bottom, .4);
+    }
+
+    h2 {
+        font-size: 26px;
+        margin-bottom: 30px !important;
+
+        span {
+            font-family: 'Barlow', sans-serif;
+            border-bottom: 3px solid $yellow;
+        }
+    }
+
+    .col-md-2 img {
+        max-width: 200px;
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            max-width: 117px;
+        }
+    }
+
+    .container {
+        padding-top: 48.5px;
+        padding-bottom: 48.5px;
+    }
+
+    &::before {
+        --gradientShift: 42%;
+        content: '';
+        position: absolute;
+        background: -moz-linear-gradient(left, #ededed var(--gradientShift), rgba(255, 255, 255, 0) 100%);
+        background: -webkit-linear-gradient(left, #ededed var(--gradientShift), rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to right, #ededed var(--gradientShift), rgba(255, 255, 255, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#00ffffff', GradientType=1);
+        height: 100%;
+        width: 100%;
+
+        @include media-breakpoint-up(xl) {
+            --gradientShift: 2%;
+            width: 701px;
+            right: 0;
+        }
+
+        @media only screen and (max-width: 768px) {
+            background: linear-gradient(rgba(237, 237, 237, 0.95), rgba(237, 237, 237, 0.95));
+            background: -moz-linear-gradient(rgba(237, 237, 237, 0.95), rgba(237, 237, 237, 0.95));
+            background: -webkit-linear-gradient(rgba(237, 237, 237, 0.95), rgba(237, 237, 237, 0.95));
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#00ffffff', GradientType=1);
+        }
+    }
+}
+
+.old .footer-cta-block {
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+
+    &.has-shadow {
+        @include boxShadow(bottom, .4);
+    }
+
+    h2 {
+        font-size: 26px;
+        margin-bottom: 30px !important;
+
+        span {
+            font-family: 'Barlow', sans-serif;
+            border-bottom: 3px solid $yellow;
+        }
+    }
+
+    .col-md-2 img {
+        max-width: 200px;
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            max-width: 117px;
+        }
+    }
+
+    .container {
+        padding-top: 48.5px;
+        padding-bottom: 48.5px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: -moz-linear-gradient(left, #ededed 42%, rgba(255, 255, 255, 0) 100%);
+        background: -webkit-linear-gradient(left, #ededed 42%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to right, #ededed 42%, rgba(255, 255, 255, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#00ffffff', GradientType=1);
+        height: 100%;
+        width: 100%;
+
+        @media screen and (min-width: 1500px) {
+            background: -moz-linear-gradient(left, #ededed 34%, rgba(255, 255, 255, 0) 100%);
+            background: -webkit-linear-gradient(left, #ededed 34%, rgba(255, 255, 255, 0) 100%);
+            background: linear-gradient(to right, #ededed 34%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        @media only screen and (max-width: 768px) {
+            background: linear-gradient(rgba(237, 237, 237, 0.95), rgba(237, 237, 237, 0.95));
+            background: -moz-linear-gradient(rgba(237, 237, 237, 0.95), rgba(237, 237, 237, 0.95));
+            background: -webkit-linear-gradient(rgba(237, 237, 237, 0.95), rgba(237, 237, 237, 0.95));
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#00ffffff', GradientType=1);
+        }
+    }
+
+    @media screen and (min-width: 1500px) {
+        background-size: 75% auto;
+    }
+}

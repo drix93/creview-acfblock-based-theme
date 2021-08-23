@@ -1,0 +1,75 @@
+.capabilities-block {
+
+    .message-box h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .cap-item {
+        .wrap {
+            position: relative;
+
+            .stretched-link {
+                color: $black;
+
+                &:hover {
+                    color: $black;
+
+                    span {
+                        color: $darkblue;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        &:not(:last-child) {
+
+            .wrap {
+                padding-top: 63%;
+                background-color: #EDEDED;
+
+                .box {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 90%;
+                }
+
+                @include media-breakpoint-down(xs) {
+                    padding: 28.75vw;
+                    max-width: 49.5vw;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &:last-child {
+            .wrap {
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                .overlay {
+                    background-image: url(/wp-content/uploads/cap-message-bg@2x.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    @include media-breakpoint-down(xs) {
+                        padding: 55px 20px;
+                    }
+                }
+
+                @include media-breakpoint-down(xs) {
+                    max-width: 57.5vw;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

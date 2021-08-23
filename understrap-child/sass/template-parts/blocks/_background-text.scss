@@ -1,0 +1,50 @@
+.background-text-block {
+    position: relative;
+
+    .bg-heading {
+        height: 80px;
+        margin-top: 35px;
+
+        .bg-text {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            font-size: 40px;
+            margin-top: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        @include media-breakpoint-up(sm) {
+            height: 100px;
+
+            .bg-text {
+                font-size: 50px;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            height: 67px;
+
+            .bg-text {
+                font-size: 75px;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: 64px;
+
+            .bg-text {
+                font-size: 80px;
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: 83px;
+
+            .bg-text {
+                font-size: 90px;
+            }
+        }
+    }
+}
