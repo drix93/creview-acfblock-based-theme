@@ -10,5 +10,5 @@ There are two branches, master and trimmed.
 * The trimmed branch has only those files which are seen as necessary for review.
 
 ## Parent Theme
-The theme is based from a start up theme called Understrap which combines the Underscores starter theme (by Automattic) and the mobile-first, responsive grid framework Bootstrap 4 (by Twitter) into a perfect open source foundation for any WordPress theme project.
+The theme is based from a start up theme called [Understrap](https://understrap.com/) which combines the Underscores starter theme (by Automattic) and the mobile-first, responsive grid framework Bootstrap 4 (by Twitter) into a perfect open source foundation for any WordPress theme project.
 * The parent theme can be found as a zip file if needed for any comparison.
